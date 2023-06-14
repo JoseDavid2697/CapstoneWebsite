@@ -2,7 +2,7 @@ import {Typography, Grid} from '@mui/material';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ResponsiveAppBar from '../components/AppBar';
-
+import MediaCard from '../components/Card';
 export const HomePage = () => {
   const navigate = useNavigate();
 
@@ -15,14 +15,15 @@ export const HomePage = () => {
   
   return (
     <>
-      <Grid container spacing={0}>
-        <Grid item>
-          <ResponsiveAppBar></ResponsiveAppBar>
-        </Grid>
-        <Grid item sx={{mt:10}}>
-          <Typography variant='h1'>HomePage</Typography>
-        </Grid>
+    <ResponsiveAppBar xs={12} sm={12}></ResponsiveAppBar>
+    <Grid container spacing={0} justifyContent="center" mt={20}>
+      <Grid item md={3} xs={12} sm={6}>
+        <MediaCard title={'See Samples'} icon={'science'}></MediaCard>
       </Grid>
+      <Grid item md={3} xs={12} sm={6}>
+        <MediaCard title={'Statistics'} icon={'stats'}></MediaCard>
+      </Grid>
+    </Grid>
     </>
     
   )

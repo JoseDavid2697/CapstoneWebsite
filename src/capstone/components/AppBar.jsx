@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import ScienceIcon from '@mui/icons-material/Science';
+import BiotechIcon from '@mui/icons-material/Biotech';
 
 const pages = ['See Samples', 'Statistics'];
 const settings = ['Logout'];
@@ -39,7 +39,7 @@ function ResponsiveAppBar() {
     <AppBar position="absolute">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <ScienceIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <BiotechIcon sx={{ display: { xs: 'none', md: 'flex', width: '80px', height: '80px'}, mr: 1 }} />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -77,7 +77,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <ScienceIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <BiotechIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
